@@ -87,5 +87,5 @@ phrase = (
     + "event, with about 3 or 4 that were classifled as serious per event."
 )
 
-numb = [x for x in phrase if x.isdigit()]
+numb = [x for x in phrase.split() if x.isdigit()]
 print(numb)
