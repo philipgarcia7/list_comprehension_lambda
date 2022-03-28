@@ -97,17 +97,6 @@ print(spec_list)
 check whether a given string contains a capital letter, a lower case letter, a number and a minimum length of 8 characters.
 (This is like a password verification function, HINT: Python function 'any' may be useful)
 """
-password = "password"
-
-check = (
-    lambda x: any(x.islower()),
-    any(x.isupper()),
-    any(x.isdigit()),
-    len(x) > 7,
-    password,
-)
-
-print(check)
 
 
 """ 7)
@@ -119,3 +108,6 @@ original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sci
 # Expected Result:
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 """
+original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+
+sort_list = list(lambda x:  )
