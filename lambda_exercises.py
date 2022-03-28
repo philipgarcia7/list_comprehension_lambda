@@ -8,6 +8,7 @@ Odd numbers from the said list:
 [1, 3, 5, 7, 9]
 """
 from math import prod
+from re import X
 from turtle import color
 
 
@@ -108,6 +109,13 @@ original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sci
 # Expected Result:
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 """
-original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+original_scores = [
+    ("English", 88),
+    ("Science", 90),
+    ("Maths", 97),
+    ("Social sciences", 82),
+]
 
-sort_list = list(lambda x:  )
+original_scores.sort(key=lambda a: a[1])
+
+print(original_scores)
