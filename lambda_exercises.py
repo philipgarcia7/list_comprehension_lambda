@@ -8,7 +8,8 @@ Odd numbers from the said list:
 [1, 3, 5, 7, 9]
 """
 from math import prod
-from re import X
+from re import M, X
+from tabnanny import check
 from turtle import color
 
 
@@ -98,7 +99,18 @@ print(spec_list)
 check whether a given string contains a capital letter, a lower case letter, a number and a minimum length of 8 characters.
 (This is like a password verification function, HINT: Python function 'any' may be useful)
 """
+mypassword = input("Input your password:")
+check = [
+    lambda x: any(x.isupper() for x in mypassword),
+    lambda x: any(x.isdigit() for x in mypassword),
+    lambda x: any(x.islower() for x in mypassword),
+    lambda x: len(mypassword) >= 8,
+]
 
+if all(x(mypassword) for x in check):
+    print("Valid")
+else:
+    print("Invalid")
 
 """ 7)
 Write a Python program to sort a list of tuples using Lambda.
